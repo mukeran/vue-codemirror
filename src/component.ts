@@ -194,6 +194,8 @@ export default defineComponent({
       cm.destroy(component.view)
     })
 
+    context.expose({ cm: component })
+
     return () => {
       return h('div', {
         class: 'v-codemirror',
